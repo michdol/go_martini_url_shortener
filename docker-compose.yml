@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  go_playground:
+    build: .
+    working_dir: /root/go/src/url_shortener
+    volumes:
+      - ./src:/root/go/src/url_shortener
+    ports:
+      - "8000:8000"
+      - "2229:22"
+
+volumes:
+  .:
